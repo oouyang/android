@@ -40,7 +40,7 @@ RUN set -x \
  && echo y | android update sdk --no-ui --all --filter sys-img-x86-android-23 --force \
  && echo n | android create avd --force -n "x86" -t android-23 --abi default/x86 \
  && : Update Intel HAXM \
- && echo y | android update sdk --filter --all --no-ui extra-intel-Hardware_Accelerated_Execution_Manager \
+ && echo y | android update sdk --no-ui --all --filter extra-intel-Hardware_Accelerated_Execution_Manager \
  && : Needed to be able to run VNC - bug of Android SDK \
  && mkdir ${ANDROID_HOME}/tools/keymaps \
  && touch ${ANDROID_HOME}/tools/keymaps/en-us \
